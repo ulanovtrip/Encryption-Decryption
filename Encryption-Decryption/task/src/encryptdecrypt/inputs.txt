@@ -1,0 +1,25 @@
+ Example 1:
+ in: -mode enc -in road_to_treasure.txt -out protected.txt -key 5 -alg unicode
+ out:
+
+ Example 2:
+ in: -mode enc -key 5 -data "Welcome to hyperskill!" -alg unicode
+ out: \jqhtrj%yt%m~ujwxpnqq&
+
+ Example 3:
+ in: -key 5 -alg unicode -data "\jqhtrj%yt%m~ujwxpnqq&" -mode dec
+ out: Welcome to hyperskill!
+
+ Example 4:
+ in: -key 5 -alg shift -data "Welcome to hyperskill!" -mode enc
+ out: Bjqhtrj yt mdujwxpnqq!
+
+ Example 5:
+ in: -key 5 -alg shift -data "Bjqhtrj yt mdujwxpnqq!" -mode dec
+ out: Welcome to hyperskill!
+
+ Test_#8:
+ in: -mode dec -key 10 -in input.txt -alg shift -out output.txt
+ .setAttach("treasure")
+ .addFile("input.txt", "dbokcebo"),
+
